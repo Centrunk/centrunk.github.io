@@ -7,7 +7,7 @@
     Use the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) to flash your SD card.
 
     1. Choose the appropriate board.
-    2. Select the Legacy 32-bit (normal or lite) version of Raspberry Pi OS.
+    2. Select the Legacy 64-bit (normal or lite) version of Raspberry Pi OS.
     3. In the customizations, if applicable, input your wireless network settings.
 
 === "PC (Debian)"
@@ -55,20 +55,19 @@
         1.  This updates your Pi to the latest software.  The command `-y`, in this context, enables to bypass the prompt asking you to confirm with `y` that you want to make the changes.
 
         ``` sh
-        sudo apt-get install -y git stm32flash gcc-arm-none-eabi gcc g++ \
-        make build-essential libasio-dev libncurses-dev libssl-dev
+        sudo apt-get install -y git stm32flash gcc-arm-none-eabi gcc g++ make build-essential libasio-dev libncurses-dev libssl-dev
         ```
     3. Open the `cmdline` config:
 
         ``` sh
-        sudo nano /boot/cmdline.txt
+        sudo nano /boot/firmware/cmdline.txt
         ```
     4. Remove `console=serial0,115200` at the start of the file, then press `Ctrl + S` to save and `Ctrl + X` to close.
 
     5. Open the startup config:
 
         ``` sh
-        sudo nano /boot/config.txt
+        sudo nano /boot/firmware/config.txt
         ```
 
     6. Add `dtoverlay=disable-bt` to the `[all]` section of the file, then press `Ctrl + S` to save and `Ctrl + X` to close.
@@ -85,19 +84,36 @@
     8. Disable services that will interfere with the hotspots function with the following commands:
 
         ``` sh
-        sudo systemctl disable serial-getty@ttyAMA0.service && \
-        sudo systemctl disable hciuart.service && \
-        sudo systemctl disable bluealsa.service && \
-        sudo systemctl disable bluetooth.service && \
-        sudo systemctl mask serial-getty@ttyAMA0.service && \
-        sudo systemctl mask hciuart.service && \
-        sudo systemctl mask bluealsa.service && \
+        sudo systemctl disable serial-getty@ttyAMA0.service
+        ```
+        ``` sh
+        sudo systemctl disable hciuart.service
+        ```
+        ``` sh
+        sudo systemctl disable bluealsa.service
+        ```
+        ``` sh
+        sudo systemctl disable bluetooth.service
+        ```
+        ``` sh
+        sudo systemctl mask serial-getty@ttyAMA0.service
+        ```
+        ``` sh
+        sudo systemctl mask hciuart.service
+        ```
+        ``` sh
+        sudo systemctl mask bluealsa.service
+        ```
+        ``` sh
         sudo systemctl mask bluetooth.service
         ```
+
     9. Make directories to the Centrunk folder, navigate to it, then clone the firmware with the following commands:
 
         ``` sh
-        sudo mkdir /opt/centrunk && \
+        sudo mkdir /opt/centrunk
+        ```
+        ``` sh
         cd /opt/centrunk
         ```
         !!! info
@@ -131,8 +147,7 @@
         1.  This updates your PC to the latest software.  The command `-y`, in this context, enables to bypass the prompt asking you to confirm with `y` that you want to make the changes.
 
         ``` sh
-        sudo apt-get install -y git stm32flash gcc-arm-none-eabi gcc g++ \
-        make build-essential libasio-dev libncurses-dev libssl-dev
+        sudo apt-get install -y git stm32flash gcc-arm-none-eabi gcc g++ make build-essential libasio-dev libncurses-dev libssl-dev
         ```
     2. Make directories to the Centrunk folder, navigate to it, then clone the firmware with the following commands:
 
