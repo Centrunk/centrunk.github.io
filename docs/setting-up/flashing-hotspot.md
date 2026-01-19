@@ -46,7 +46,7 @@
     !!! note ""
 
         === "USB Adapter Board"
-            Flash with the following command while hat is on the USB Adapter Board. Set the adapter switch to position B or ‘ON’, and plug the adapter board into the Pi.  Run the command:
+            Flash with the following command while hat is on the USB Adapter Board. Set the adapter switch to "BOOT0" (if using the W3AXL board) or position B/‘ON’ (with the older "Chinese" boards), and plug the adapter board into the Pi.  Run the command:
             ``` sh
             sudo stm32flash -v -w dvm-firmware-hs_f1.bin /dev/ttyUSB0
             ```
