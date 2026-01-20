@@ -7,7 +7,7 @@
     Use the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) to flash your SD card.
 
     1. Choose the appropriate board.
-    2. Select the Legacy 64-bit (normal or lite) version of Raspberry Pi OS.
+    2. Select the Legacy 64-bit (normal or lite) version of Raspberry Pi OS. Click on "Raspberry Pi OS (other)" and scroll down.
     3. In the customizations, if applicable, input your wireless network settings.
 
 === "PC (Debian)"
