@@ -8,7 +8,7 @@
 
     1. Choose the appropriate board.
     2. Click on "Raspberry Pi OS (64-bit)"
-    3. If using Wifi, set your wireless network settings in the customization menu.
+    3. If using WiFi, set your wireless network settings in the customization menu.
 
 
 === "PC (Debian)"
