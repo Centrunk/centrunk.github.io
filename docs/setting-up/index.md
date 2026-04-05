@@ -22,7 +22,7 @@ All subscribers are **REQUIRED** to be part of the Discord.
 
 | Setup | Host | Board(s) | Notes |
 |-------|------|----------|-------|
-| **DVRS or Conventional** | Raspberry Pi | 1 hotspot board | Recommend a USB board|
+| **DVRS or Conventional** | Raspberry Pi | 1 hotspot board | USB board recommended |
 | **Trunking** | Raspberry Pi | 2 hotspot boards, 1 USB adapter | One board on the pi, one board on the USB |
 | **Linux** | Any Linux host | 2 hotspot boards, 2 USB boards | |
 
