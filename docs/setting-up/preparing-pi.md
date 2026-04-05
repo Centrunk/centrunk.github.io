@@ -25,7 +25,7 @@
     1. Install the SMA 90-degree connector and attach the provided antennas to the hotspot. 
     2. Place the hotspot onto the Pi GPIO pins found at the top of the board for flashing.  
        - Alternatively, place the hotspot on the USB board and connect the USB port to your Pi.
-    2. Connect the Raspberry Pi to power, and an internet connection through Ethernet or WiFi. If you configured a WiFi network during image setup, the Raspberry Pi should connect to your network automatically.
+    3. Connect the Raspberry Pi to power, and an internet connection through Ethernet or WiFi. If you configured a WiFi network during image setup, the Raspberry Pi should connect to your network automatically.
 
 === "PC (Debian)"
     ???+ warning
