@@ -7,29 +7,41 @@
     Use the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) to flash your SD card.
 
     1. Choose the appropriate board.
-    2. Select the Legacy 64-bit (normal or lite) version of Raspberry Pi OS. Click on "Raspberry Pi OS (other)" and scroll down.
-    3. In the customizations, if applicable, input your wireless network settings.
+    2. Click on "Raspberry Pi OS (64-bit)"
+    3. If using WiFi, set your wireless network settings in the customization menu.
+
 
 === "PC (Debian)"
 
     1. Ensure your PC has Linux Debian installed.
 
-## Prepare the hardware
+## Prepare the Hardware
 
 === "Raspberry Pi"
 
-    1. Before applying power to any parts, install the SMA 90-degree connector and attach the provided antennas to the hotspot. Once the antennas are successfully installed, place the hotspot onto the Pi GPIO pins found at the top of the board for flashing.  Alternatively, place the hotspot on the USB board and connect the USB port to your Pi.
-    2. Connect the Raspberry Pi to power, and an internet connection through Ethernet or WiFi. If you configured a WiFi network during image setup, the Raspberry Pi should connect to your network automatically.
+    ???+ warning
+        Do not apply power to the Pi until you've completed these steps.
+
+    1. Install the SMA 90-degree connector and attach the provided antennas to the hotspot. 
+    2. Place the hotspot onto the Pi GPIO pins found at the top of the board for flashing.  
+       - Alternatively, place the hotspot on the USB board and connect the USB port to your Pi.
+    3. Connect the Raspberry Pi to power, and an internet connection through Ethernet or WiFi. If you configured a WiFi network during image setup, the Raspberry Pi should connect to your network automatically.
 
 === "PC (Debian)"
+    ???+ warning
+        Do not apply power to the computer until you've completed these steps.
 
     1. You will need at least one USB conversion board for DVRS, or two for CC/VC operation.
-    2. Before applying power to any parts, install the SMA 90-degree connector and attach the provided antennas to the hotspot. Once the antennas are successfully installed, place the hotspot onto the USB board and connect the USB port to your computer.
+    2. Install the SMA 90-degree connector and attach the provided antennas to the hotspot. Once the antennas are successfully installed, place the hotspot onto the USB board and connect the USB port to your computer.
     3. Connect the computer to power, and an internet connection through Ethernet or WiFi.
 
-## Software operations
+## Install the Software
 
 === "Raspberry Pi"
+    1. Log into [myCTRS](https://my.centrunk.net/){:target="_blank"} and create a site.
+    2. Click the "set up my hotspot" button and run the command on your hotspot in a terminal or ssh session.
+
+=== "Raspberry Pi (manual)"
     ???+ info
         There is an automatic script to perform the steps below.  Once the script completes, your computer will reboot and you can proceed to the next section, [Flashing a hotspot](flashing-hotspot.md).
         ``` sh
@@ -136,6 +148,16 @@
         sudo reboot now
         ```
 
+    # Joining the network
+
+    You are ready to join the CTRS network.  Run the following command, then open a ticket by clicking the button below.
+
+    ``` sh
+    sudo curl -fsSL https://pkgs.netbird.io/install.sh | sudo sh
+    ```
+
+    [Open a ticket](https://tickets.bellsys.cc/){ .md-button .md-button--primary }
+
 === "PC (Debian)"
 
     1. Update the PC and install needed utilities with the following commands:
@@ -169,3 +191,13 @@
                 ``` sh
                 sudo git clone --recurse-submodules https://github.com/DVMProject/dvmfirmware.git
                 ```
+
+    # Joining the network
+
+    You are ready to join the CTRS network.  Run the following command, then open a ticket by clicking the button below.
+
+    ``` sh
+    sudo curl -fsSL https://pkgs.netbird.io/install.sh | sudo sh
+    ```
+
+    [Open a ticket](https://tickets.bellsys.cc/){ .md-button .md-button--primary }

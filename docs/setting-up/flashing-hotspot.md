@@ -19,7 +19,7 @@
 
     1. Change directories to the firmware folder with
     ``` sh
-    cd /opt/centrunk/dvmfirmware-hs
+    cd /opt/centrunk/dvmfirmware
     ```
     2.	Build the firmware binary
         1.	Generic STM32 Board
@@ -62,6 +62,10 @@
             ``` sh
             sudo stm32flash -v -w dvm-firmware-hs_f1.bin -g 0x0 -R -i 20,-21,21:-20,21 /dev/ttyAMA0
             ```
+            Alternate Command for Bookworm
+            ``` sh
+            sudo stm32flash -v -w dvm-firmware-hs_f1.bin -g 0x0 -R -i 532,-533,533:-532,-533,533 /dev/ttyAMA0
+            ```
             4.	Once the board is completely flashed, remove the jumpers added in step 1. This can be confirmed with a 100% progress and a success message in the command line window.
             5.	The board should be ready to go. If unsuccessful, rinse and repeat the steps in this section.
 
@@ -77,7 +81,7 @@
     !!! info "This is unconfirmed at this time."
         WA0EDA V3 Cards
           ``` sh
-          sudo stm32flash -v -w dvm-firmware-eda.bin -g 0x0 -i 20,-21,21:-20,21 /dev/ttyAMA0
+          sudo stm32flash -v -w dvm-firmware_eda.bin -g 0x0 -i 20,-21,21:-20,21 /dev/ttyAMA0
           ```
 
     !!! info "These boards may still have a Boot 0 and Boot 1 pin that need to be jumped like a normal hotspot."

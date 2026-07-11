@@ -1,12 +1,11 @@
 site_name: CTRS Documentation
-site_url: https://thehedgefrog.github.io/ctrs-documentation
+site_url: https://centrunk.github.io/
 
 nav:
   - Setting Up your Site:
     - Getting started: setting-up/index.md
     - setting-up/preparing-pi.md
     - setting-up/flashing-hotspot.md
-    - setting-up/join-network.md
   - FAQ: faq/faq.md
   - Radio Configuration:
     - Programming: radio-programming/index.md
@@ -95,4 +94,4 @@ extra:
   generator: false
 
 
-copyright: © 2022 - 2024 Central Texas Trunked Radio System
+copyright: © 2022 - 2026 Central Texas Trunked Radio System
