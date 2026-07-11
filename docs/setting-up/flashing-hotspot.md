@@ -62,6 +62,10 @@
             ``` sh
             sudo stm32flash -v -w dvm-firmware-hs_f1.bin -g 0x0 -R -i 20,-21,21:-20,21 /dev/ttyAMA0
             ```
+            Alternate Command for Bookworm
+            ``` sh
+            sudo stm32flash -v -w dvm-firmware-hs_f1.bin -g 0x0 -R -i 532,-533,533:-532,-533,533 /dev/ttyAMA0
+            ```
             4.	Once the board is completely flashed, remove the jumpers added in step 1. This can be confirmed with a 100% progress and a success message in the command line window.
             5.	The board should be ready to go. If unsuccessful, rinse and repeat the steps in this section.
 
