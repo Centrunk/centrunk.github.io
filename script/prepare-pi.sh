@@ -5,10 +5,10 @@ sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get install -y git stm32flash gcc-arm-none-eabi gcc g++ make cmake build-essential libasio-dev libncurses-dev libssl-dev
 
-# Removing a console configuration from /boot/cmdline.txt
+# Removing a console configuration from /boot/firmware/cmdline.txt
 sudo sed -i 's/console=serial0,115200 //g' /boot/firmware/cmdline.txt
 
-# Determining the model of Raspberry Pi to adjust /boot/config.txt accordingly
+# Determining the model of Raspberry Pi to adjust /boot/firmware/config.txt accordingly
 model=$(tr -d '\0' < /proc/device-tree/model)
 overlay="dtoverlay=disable-bt"
 if echo "$model" | grep -q "Raspberry Pi 3"; then
