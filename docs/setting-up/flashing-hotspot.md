@@ -6,7 +6,7 @@
 
     1. Change directories to the firmware folder with
     ``` sh
-    cd /opt/centrunk/dvmfirmware-hs
+    cd /opt/centrunk/dvmfirmware
     ```
     2.	Build the firmware binary
     ``` sh
@@ -77,7 +77,7 @@
     !!! info "This is unconfirmed at this time."
         WA0EDA V3 Cards
           ``` sh
-          sudo stm32flash -v -w dvm-firmware-eda.bin -g 0x0 -i 20,-21,21:-20,21 /dev/ttyAMA0
+          sudo stm32flash -v -w dvm-firmware_eda.bin -g 0x0 -i 20,-21,21:-20,21 /dev/ttyAMA0
           ```
 
     !!! info "These boards may still have a Boot 0 and Boot 1 pin that need to be jumped like a normal hotspot."
